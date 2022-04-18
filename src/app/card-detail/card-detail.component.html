@@ -1,0 +1,11 @@
+<div *ngIf="card">
+    <h2>{{card.name | uppercase}} Details</h2>
+    <div><img src="{{card.imageUrl}}" alt="MTG card art"></div>
+    <div>Converted Mana Cost: {{card.cmc}}</div>
+    <div>Colors: {{card.colors}}</div>
+    <div>Types:  {{card.types}}</div>
+    <div>Rarity:  {{card.rarity}}</div>
+    <div>Set: {{card.set}}</div>
+</div>
+
+<button type="button" (click)="goBack()">Go back</button>

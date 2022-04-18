@@ -1,0 +1,22 @@
+<!-- <div>
+    <label for="name">Card name: </label>
+    <input id="name" [(ngModel)]="card.name" placeholder="name">
+</div>
+
+<div><span>name: </span> {{card.name | uppercase}}</div>
+<div><img src={{card.imageUrl}} alt="Card image"></div>
+<div><span>Converted Mana Cost: </span> {{card.cmc}}</div>
+<div><span>Colors: </span> {{card.colors}}</div>
+<div><span>Types: </span> {{card.types}}</div>
+<div><span>Rarity: </span> {{card.rarity}}</div>
+<div><span>Set: </span> {{card.set}}</div>
+-->
+
+<h2>My Cards: </h2>
+<ul class="cards">
+    <li *ngFor="let card of cards">
+        <a routerLink="/detail/{{card.name}}">
+            <span class="badge">{{card.cmc}}</span> {{card.name}}
+        </a>
+    </li>
+</ul>
